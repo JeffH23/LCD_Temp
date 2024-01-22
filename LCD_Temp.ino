@@ -60,6 +60,12 @@ void loop(void)
   lcd.setCursor(5,0);
   lcd.print(" F");
 
+  lcd.setCursor(8,0);
+  lcd.print(DallasTemperature::toFahrenheit(sensors.getTempCByIndex(2)));
+  lcd.setCursor(13,0);
+  lcd.print(" F");
+  Serial.println("");
+  
   lcd.setCursor(0,1);
   lcd.print(DallasTemperature::toFahrenheit(sensors.getTempCByIndex(1)));
   lcd.setCursor(5,1);
